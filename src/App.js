@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fabric } from "fabric";
 import "./App.css";
+import  Header from "./Header";
 import black from "./components/Black.svg";
 import blue from "./components/Blue.svg";
 import check from "./components/Check.svg";
@@ -11,6 +12,8 @@ import red from "./components/Red.svg";
 import yellow from "./components/Yellow.svg";
 import slider from "./components/slider.svg";
 import Pages  from "./components/Pages/Pages";
+
+
 
 function App() {
     const [canvas, setCanvas] = useState(null);
@@ -60,7 +63,13 @@ function App() {
     }, [penSize]);
 
     return (
+        <>
         <div className="App">
+        <div id="top-page">
+                    <span>🎨 untitled - Paint</span>
+                    <span>🔴 🟠 🟢</span>    
+            </div>
+            <center><h1>Painting World</h1></center>
             <div className="tools">
                 <div className="pen-tools">
                     <div className="pen">
@@ -74,8 +83,7 @@ function App() {
                         onChange={(e) => setPenSize(e.target.value)}
                         min="1"
                         max="10"
-                        id="myRange"
-                    />
+                        id="myRange" />
 
                     <div
                         className="color black"
@@ -126,12 +134,14 @@ function App() {
                 <div className="pen-settings">
                     <div
                         className="eraser"
-                        onClick={() => {
+                        onClick={() =>  {
                             setInvert(!invert);
-                        }}
+                        } }
                     >
-                        <img alt="eraser" src={eraser} />
+                        <img alt="eraser" src={eraser} color ="white" />
                     </div>
+                    
+                    
 
                     <input
                         type="range"
@@ -139,14 +149,20 @@ function App() {
                         max="100"
                         id="myRange"
                         className="slider"
-                    />
+                        color="white" />
                 </div>
             </div>
-          
+
+            <div>
+            <h3>Let's Create Paint!</h3>
+        </div>
+
+
             {/* <div className="canvas"> */}
             <canvas id="canvas"></canvas>
             {/* </div> */}
-        </div>
+        </div></>
+        
     );
 }
 

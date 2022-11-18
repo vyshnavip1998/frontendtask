@@ -1,0 +1,88 @@
+.App {
+    width: 100%;
+    height: 100%;
+}
+
+.tools {
+    width: 100%;
+    height: 12%;
+    /* background-color: rgb(212, 211, 211); */
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.pen-tools {
+    display: flex;
+    align-items: center;
+}
+
+.pen {
+    margin: 0 0.3rem;
+    cursor: pointer;
+}
+
+.color {
+    width: 36px;
+    height: 36px;
+    margin: 0 0.3rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.check {
+    position: absolute;
+    left: 6px;
+    top: 5px;
+}
+
+.eraser {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.pen-settings {
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.canvas {
+    background-color: pink;
+    width: 100%;
+    height: 88%;
+}
+
+/* ******* slider styling ******** */
+.slider {
+    -webkit-appearance: none;
+    margin: 0 1.5rem;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #acacac;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+}
+
+/* ********* disenabling selection ********** */
+
+body {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+img {
+    pointer-events: none;
+}

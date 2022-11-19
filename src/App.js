@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fabric } from "fabric";
 import "./App.css";
-import  Header from "./Header";
+//import  Header from "./Header";
 import black from "./components/Black.svg";
 import blue from "./components/Blue.svg";
 import check from "./components/Check.svg";
